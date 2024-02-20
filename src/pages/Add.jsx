@@ -1,3 +1,5 @@
+import { BookForm } from "../components";
+
 export const Add = () => (
-  <p>add page</p>
+  <BookForm />
 )
