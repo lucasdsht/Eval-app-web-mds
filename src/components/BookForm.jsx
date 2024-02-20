@@ -21,7 +21,10 @@ export const BookForm = () => {
       <input
         type="number"
         value={stock}
-        onChange={(e) => setStock(e.target.value)}
+        onChange={(e) => {
+          const value = e.target.value
+          setStock(Number(value) < 0 ? 0 : Number(value))
+        }}
       />
       <button type="submit">Add</button>
     </form>
