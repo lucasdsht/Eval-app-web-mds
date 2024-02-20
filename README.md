@@ -9,8 +9,7 @@
 4. Quel hook permet de déclencher une action à un moment précis du cycle de vie du composant ?
 - Le hook `useEffect`
 5. React manipule-t-il directement le DOM de l’application ? expliquez ?
-- React ne manipule pas directement le DOM, il manipule un DOM virtuel
-
+- React utilise un DOM virtuel pour rendre l'interface utilisateur. Lorsque l'état d'un composant change, le DOM virtuel est d'abord mis à jour. Ensuite, React compare le DOM virtuel mis à jour avec une version pré-mise à jour du DOM virtuel. React met ensuite à jour le DOM réel avec les modifications apportées au DOM virtuel. Le DOM virtuel permet à React de mettre à jour le DOM réel de manière efficace, ce qui se traduit par de meilleures performances.
 ## Questions pratiques
 1. Vous mettez en place un routeur sur votre projet react, écrivez la route qui permet de lancer le composant Post en lui transmettant le slug du post à afficher en paramètre
 ```js
